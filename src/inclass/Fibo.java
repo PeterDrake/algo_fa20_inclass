@@ -18,6 +18,7 @@ public class Fibo {
 
     /**
      * a and b are the two previous numbers
+     * n is the number of additional steps to take beyond b
      */
     public static int helper(int a, int b, int n) {
         if (n == 0) {
