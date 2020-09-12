@@ -1,7 +1,9 @@
 package inclass;
 
+/** Linked queue implementation. */
 public class LinkedQueue<K> implements Queue<K> {
 
+    /** List node. */
     private class Node {
 
         K key;
@@ -15,8 +17,10 @@ public class LinkedQueue<K> implements Queue<K> {
 
     }
 
+    /** The front node of this queue, or null if this queue is empty. */
     private Node front;
 
+    /** The back node of this queue. Undefined if this queue is empty. */
     private Node back;
 
     @Override
@@ -41,4 +45,5 @@ public class LinkedQueue<K> implements Queue<K> {
     public boolean isEmpty() {
         return front == null;
     }
+
 }

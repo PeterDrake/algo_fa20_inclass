@@ -1,9 +1,15 @@
 package inclass;
 
+/** Array-based stack implementation. */
 public class ArrayStack<K> implements Stack<K> {
 
+    /**
+     * Array of keys. Only the first size elements are part of this stack.
+     * The stack grows toward larger indices.
+     */
     private K[] keys;
 
+    /** Number of keys currently in this stack. */
     private int size;
 
     public ArrayStack() {
@@ -28,6 +34,7 @@ public class ArrayStack<K> implements Stack<K> {
         size++;
     }
 
+    /** If this stack is full, copies the keys into an array twice as large. */
     private void expandIfNecessary() {
         if (size == keys.length) {
             K[] stretched = (K[])new Object[size * 2];

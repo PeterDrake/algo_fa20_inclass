@@ -1,7 +1,9 @@
 package inclass;
 
+/** Linked set implementation. */
 public class LinkedSet<K> implements Set<K> {
 
+    /** List node. */
     private class Node {
 
         K key;
@@ -15,6 +17,7 @@ public class LinkedSet<K> implements Set<K> {
 
     }
 
+    /** The first node in this set, or null if this set is empty. */
     private Node front;
 
     @Override

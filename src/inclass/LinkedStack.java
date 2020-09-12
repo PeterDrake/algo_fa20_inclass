@@ -1,7 +1,9 @@
 package inclass;
 
+/** Linked stack implementation. */
 public class LinkedStack<K> implements Stack<K> {
 
+    /** List node. */
     private class Node {
 
         K key;
@@ -15,6 +17,7 @@ public class LinkedStack<K> implements Stack<K> {
 
     }
 
+    /** The top node in this stack, or null if this stack is empty. */
     private Node top;
 
     @Override

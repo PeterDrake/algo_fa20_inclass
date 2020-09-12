@@ -1,11 +1,18 @@
 package inclass;
 
+/** Array-based queue implementation. */
 public class ArrayQueue<K> implements Queue<K> {
 
+    /**
+     * Array of keys. Only the first size elements are part of this queue.
+     * The queue grows toward larger indices and wraps around as needed.
+     */
     private K[] keys;
 
+    /** Index, in keys, of the front key. */
     private int front;
 
+    /** Number of keys currently in this queue. */
     private int size;
 
     public ArrayQueue() {
@@ -32,6 +39,7 @@ public class ArrayQueue<K> implements Queue<K> {
         return size == 0;
     }
 
+    /** If this queue is full, copies the keys into an array twice as large. */
     private void expandIfNecessary() {
         if (size == keys.length) {
             K[] stretched = (K[])new Object[size * 2];

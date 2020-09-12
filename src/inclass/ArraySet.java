@@ -1,9 +1,12 @@
 package inclass;
 
+/** Array-based set implementation. */
 public class ArraySet<K> implements Set<K> {
 
+    /** Array of keys. Only the first size elements are part of this set. */
     private K[] keys;
 
+    /** Number of keys currently in this set. */
     private int size;
 
     public ArraySet() {
@@ -48,6 +51,7 @@ public class ArraySet<K> implements Set<K> {
         }
     }
 
+    /** If this set is full, copies the keys into an array twice as large. */
     private void expandIfNecessary() {
         if (size == keys.length) {
             K[] stretched = (K[])new Object[size * 2];
