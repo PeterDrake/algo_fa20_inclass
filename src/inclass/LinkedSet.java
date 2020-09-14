@@ -47,7 +47,9 @@ public class LinkedSet<K> implements Set<K> {
 
     @Override
     public void remove(K key) {
-        if (front.key.equals(key)) {
+        if (front == null) {
+            return;
+        } else if (front.key.equals(key)) {
             front = front.next;
         } else {
             for (Node p = front; p.next != null; p = p.next) {

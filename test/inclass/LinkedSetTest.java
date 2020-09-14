@@ -59,4 +59,9 @@ class LinkedSetTest {
         assertTrue(s.isEmpty());
     }
 
+    @Test
+    void removesKeyFromEmptySet() {
+        s.remove(1);
+    }
+
 }
