@@ -38,6 +38,7 @@ public class LinkedQueue<K> implements Queue<K> {
             back = n;
         } else {
             back.next = n;
+            back = n;
         }
     }
 

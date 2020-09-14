@@ -37,4 +37,14 @@ class LinkedQueueTest {
         assertTrue(q.isEmpty());
     }
 
+    @Test
+    void enqueuesMultipleKeys() {
+        q.enqueue(1);
+        q.enqueue(2);
+        q.enqueue(3);
+        assertEquals(1, q.dequeue());
+        assertEquals(2, q.dequeue());
+        assertEquals(3, q.dequeue());
+    }
+
 }
