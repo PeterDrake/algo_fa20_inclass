@@ -54,7 +54,7 @@ public class Fibo {
 
     public static void main(String[] args) {
         long before = System.currentTimeMillis();
-        System.out.println(recursiveFibo2(20));
+        System.out.println(iterativeFibo(20));
         long after = System.currentTimeMillis();
         System.out.println(after - before + " milliseconds");
     }
